@@ -1,49 +1,58 @@
 # BlackRoad-Security — RoadCode
 
-> Auth & Security division of [BlackRoad OS, Inc.](https://github.com/BlackRoad-OS-Inc)
+> Security & Compliance division of [BlackRoad OS, Inc.](https://github.com/BlackRoad-OS-Inc)
 
-Authentication, encryption, pen testing, SIEM, threat intelligence, cert management.
+Security auditing, penetration testing, compliance checks, threat detection, and fleet hardening. Every node in the BlackRoad fleet gets scanned, every agent gets verified, every connection gets audited.
 
-## Connection to BlackRoad-OS-Inc
+## Capabilities
+
+| Area | What We Do |
+|------|-----------|
+| **Cipher Agent** | Automated security scanning across the 7-node fleet |
+| **Penetration Testing** | Network + application pen tests against all services |
+| **Compliance Checks** | License auditing, secret detection, dependency scanning |
+| **Fleet Hardening** | SSH key rotation, firewall rules, WireGuard mesh verification |
+| **RoadBlock** | Intrusion detection + automatic lockdown |
+
+## Org Hierarchy
 
 ```
-BlackRoad-OS-Inc (Parent — Data Layer)
-  └── BlackRoad-Security (Auth & Security)
-      └── RoadCode (this repo — workspace + automation)
+BlackRoad-OS-Inc (Parent — 254 repos, 67 agents, 7 nodes)
+  └── BlackRoad-Security (Security & Compliance)
+      ├── RoadCode              ← this repo (workspace + automation)
+      ├── penetration-testing    ← pen test suites + reports
+      ├── security-audits        ← audit logs + compliance records
+      ├── roadblock              ← intrusion detection system
+      ├── operator               ← CLI tools + security scripts
+      └── source                 ← canonical source tree
 ```
 
-- **Parent Org**: [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
-- **Master RoadCode**: [BlackRoad-OS-Inc/RoadCode](https://github.com/BlackRoad-OS-Inc/RoadCode)
-- **Operator**: [BlackRoad-OS-Inc/blackroad-operator](https://github.com/BlackRoad-OS-Inc/blackroad-operator)
-- **Domain**: [roadchain.io](https://roadchain.io)
-- **Repos in this org**: 20
+## Repos in This Org
 
-## Role
+- [`RoadCode`](https://github.com/BlackRoad-Security/RoadCode) — Workspace hub (this repo)
+- [`penetration-testing`](https://github.com/BlackRoad-Security/penetration-testing) — Pen test tooling + reports
+- [`security-audits`](https://github.com/BlackRoad-Security/security-audits) — Audit records + compliance
+- [`roadblock`](https://github.com/BlackRoad-Security/roadblock) — Intrusion detection
+- [`operator`](https://github.com/BlackRoad-Security/operator) — CLI + security automation
 
-| Property | Value |
-|----------|-------|
-| **Division** | Auth & Security |
-| **Parent** | BlackRoad-OS-Inc |
-| **Governance** | [Cece Protocol](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ORG-MAP.md) |
-| **License** | Proprietary — BlackRoad OS, Inc. |
+## Fleet Security Overview
 
-## RoadCode Standard
+- **WireGuard mesh**: 12/12 SSH connections verified across all nodes
+- **Tor hidden services**: 3 Pi nodes reachable via .onion addresses
+- **Gitea**: Primary git host on Octavia — all repos scanned for secrets
+- **Memory security**: Agent identity verification + audit trails via `memory-security.sh`
+- **Start Certification**: 5 real check scripts, 80% pass rate on operator
 
-Every BlackRoad org follows the RoadCode standard:
-- `RoadCode/` repo = workspace + automation hub
-- `.github/` repo = org profile + shared workflows
-- `operator/` repo = CLI tools + bootstrap scripts
-- `source/` repo = canonical source tree
+## How It Connects
 
-All orgs report to **BlackRoad-OS-Inc** as the central coordination layer.
+- **Parent**: [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc) — central coordination
+- **Hardware**: [BlackRoad-Hardware](https://github.com/BlackRoad-Hardware) — physical node security
+- **Cloud**: [BlackRoad-Cloud](https://github.com/BlackRoad-Cloud) — edge + TLS via Caddy on Gematria
 
-## Quick Links
+## License
 
-- [Master ORG-MAP](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ORG-MAP.md)
-- [Master TODO](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/TODO.md)
-- [Master ROADMAP](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ROADMAP.md)
-- [All Domain Repos](https://github.com/orgs/BlackRoad-OS-Inc/repositories)
+Proprietary — BlackRoad OS, Inc. See [LICENSE](./LICENSE).
 
 ---
 
-**Proprietary Software — BlackRoad OS, Inc.**
+*Remember the Road. Pave Tomorrow.*
